@@ -109,6 +109,7 @@
   .iconbtn:active{ transform: translateY(4px); box-shadow:0 1px 0 rgba(0,0,0,0.18); }
   #galleryBtn{ background:#fff; }
   #newBtn{ background:var(--berry); }
+  #undoBtn{ background:#FF914D; }
   #saveBtn{ background:var(--grass); }
 
   /* ---------- Main / canvas ---------- */
@@ -313,6 +314,75 @@
   }
   #toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
 
+  /* Cover Screen */
+  #coverScreen{
+    position:absolute; inset:0;
+    background: linear-gradient(135deg, var(--sky) 0%, #E7F6FF 40%, #F3FFEA 100%);
+    z-index:50;
+    display:flex; align-items:center; justify-content:center;
+    padding:16px;
+  }
+  #coverScreen[hidden]{ display:none; }
+  .coverCard{
+    background:var(--cream);
+    border-radius:36px;
+    padding:28px 22px 24px;
+    max-width:420px; width:100%;
+    text-align:center;
+    box-shadow:0 14px 0 rgba(0,0,0,0.18), 0 20px 40px rgba(0,0,0,0.12);
+    display:flex; flex-direction:column; align-items:center; gap:14px;
+  }
+  .coverArt{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+    font-size:36px; line-height:1;
+  }
+  .emojiFloat{
+    display:inline-block;
+    animation: floatUp 2.4s ease-in-out infinite;
+  }
+  @keyframes floatUp{
+    0%,100%{ transform: translateY(0); }
+    50%{ transform: translateY(-10px); }
+  }
+  .coverCard h1{
+    margin:0; color:var(--plum); font-weight:800;
+    font-size:clamp(26px,7vw,42px);
+    text-shadow: 2px 2px 0 #fff, 0 3px 0 rgba(0,0,0,0.08);
+  }
+  .coverSub{
+    margin:0; color:var(--ink); font-weight:700;
+    font-size:clamp(16px,4vw,22px); opacity:0.8;
+  }
+  .nameLabel{
+    font-weight:700; color:var(--ink); font-size:18px;
+    margin:0; align-self:flex-start;
+  }
+  #playerName{
+    width:100%; padding:14px 16px;
+    border-radius:20px; border:4px solid #fff;
+    font-family:'Baloo 2', sans-serif;
+    font-size:20px; font-weight:700;
+    background:#fff; color:var(--ink);
+    box-shadow:0 5px 0 rgba(0,0,0,0.12);
+    outline:none; text-align:center;
+    transition: transform .1s, border-color .15s;
+  }
+  #playerName:focus{ border-color:var(--sun); transform: translateY(-2px); }
+  #playerName::placeholder{ color:rgba(43,33,56,0.35); }
+  .startBtn{
+    border:none; border-radius:24px;
+    padding:16px 32px;
+    background:var(--grass); color:#fff;
+    font-family:'Baloo 2', sans-serif;
+    font-size:clamp(20px,5vw,26px); font-weight:800;
+    cursor:pointer;
+    box-shadow:0 6px 0 rgba(0,0,0,0.18), 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform .1s;
+    width:100%;
+  }
+  .startBtn:active{ transform: translateY(4px); box-shadow:0 2px 0 rgba(0,0,0,0.18); }
+  .startBtn:disabled{ opacity:0.6; cursor:not-allowed; }
+
   footer#seoFooter{
     font-size:11px;
     color:rgba(43,33,56,0.35);
@@ -331,12 +401,29 @@
 </head>
 <body>
 <div id="app">
+  <div id="coverScreen" role="dialog" aria-modal="true" aria-labelledby="coverTitle">
+    <div class="coverCard">
+      <div class="coverArt" aria-hidden="true">
+        <span class="emojiFloat">🖌️</span>
+        <span class="emojiFloat" style="animation-delay:0.3s">🎨</span>
+        <span class="emojiFloat" style="animation-delay:0.6s">🦋</span>
+        <span class="emojiFloat" style="animation-delay:0.9s">🐱</span>
+        <span class="emojiFloat" style="animation-delay:1.2s">⭐</span>
+      </div>
+      <h1 id="coverTitle">Kanvas Amma</h1>
+      <p class="coverSub">Ayo lukis dan bermain!</p>
+      <label class="nameLabel" for="playerName">Siapa namamu?</label>
+      <input id="playerName" type="text" placeholder="Masukkan nama..." maxlength="20" autocomplete="off">
+      <button id="startBtn" class="startBtn">Mulai 🚀</button>
+    </div>
+  </div>
 
   <header id="topbar">
     <h1 id="title">🖌️ <span class="label">Kanvas Amma</span></h1>
     <div id="topRight">
       <button class="iconbtn" id="galleryBtn" aria-label="Choose a picture to paint">🖼️</button>
       <button class="iconbtn" id="newBtn" aria-label="Clear the painting">🗑️</button>
+      <button class="iconbtn" id="undoBtn" aria-label="Undo last stroke">↩️</button>
       <button class="iconbtn" id="saveBtn" aria-label="Save my painting">⬇️</button>
     </div>
   </header>
@@ -420,6 +507,25 @@
   let drawing = false;
   let lastX = 0, lastY = 0;
   let currentAnimal = null;
+
+  const history = [];
+  const MAX_HISTORY = 30;
+  function saveSnapshot(){
+    history.push(paintCanvas.toDataURL());
+    if(history.length > MAX_HISTORY) history.shift();
+  }
+  function undo(){
+    if(history.length > 0){
+      const img = new Image();
+      img.onload = ()=>{
+        pctx.clearRect(0,0,paintCanvas.width,paintCanvas.height);
+        pctx.drawImage(img,0,0);
+      };
+      img.src = history.pop();
+      showToast('Undo! ↩️');
+      playPop(500);
+    }
+  }
 
   const animalNames = {
     elephant:'Elephant', cat:'Cat', lion:'Lion',
@@ -747,8 +853,8 @@
     lastX=x; lastY=y;
     updateCursor(x,y);
     if(tool==='brush'){ drawing=true; drawDot(x,y); playSwish(); }
-    else if(tool==='fill'){ floodFill(x,y); }
-    else { stampAt(x,y); }
+    else if(tool==='fill'){ floodFill(x,y); saveSnapshot(); }
+    else { stampAt(x,y); saveSnapshot(); }
   }
   function move(e){
     const {x,y} = getPos(e);
@@ -757,7 +863,7 @@
     e.preventDefault();
     if(tool==='brush'){ drawLine(lastX,lastY,x,y); lastX=x; lastY=y; }
   }
-  function end(){ drawing=false; }
+  function end(){ if(drawing){ drawing=false; saveSnapshot(); } }
 
   paintCanvas.addEventListener('mousedown', start);
   paintCanvas.addEventListener('mousemove', move);
@@ -829,6 +935,7 @@
 
   /* ================= TOPBAR ACTIONS ================= */
   document.getElementById('newBtn').addEventListener('click', ()=>{
+    saveSnapshot();
     pctx.clearRect(0,0,paintCanvas.width,paintCanvas.height);
     showToast('Clean slate! ✨');
     playPop(400);
@@ -842,7 +949,8 @@
     octx2.drawImage(paintCanvas,0,0);
     octx2.drawImage(outlineCanvas,0,0);
     const link = document.createElement('a');
-    link.download = (currentAnimal ? currentAnimal+'-' : '') + 'painting.png';
+    const playerName = (localStorage.getItem('kanvasAmmaPlayerName')||'').trim();
+    link.download = (playerName ? playerName.replace(/\s+/g,'-')+'-' : '') + (currentAnimal ? currentAnimal+'-' : '') + 'painting.png';
     link.href = out.toDataURL('image/png');
     link.click();
     spawnConfettiFull();
@@ -850,12 +958,14 @@
     playPop(900);
   });
   document.getElementById('galleryBtn').addEventListener('click', ()=> openGallery());
+  document.getElementById('undoBtn').addEventListener('click', undo);
 
   /* ================= GALLERY ================= */
   function openGallery(){ galleryOverlay.hidden = false; }
   function closeGallery(){ galleryOverlay.hidden = true; }
   document.querySelectorAll('.galleryItem').forEach(item=>{
     item.addEventListener('click', ()=>{
+      saveSnapshot();
       const animal = item.dataset.animal;
       pctx.clearRect(0,0,paintCanvas.width,paintCanvas.height);
       currentAnimal = animal==='blank' ? null : animal;
@@ -872,8 +982,25 @@
     });
   });
 
-  // Show gallery on first load
-  openGallery();
+  const coverScreen = document.getElementById('coverScreen');
+  const playerNameInput = document.getElementById('playerName');
+  const startBtn = document.getElementById('startBtn');
+
+  const savedName = localStorage.getItem('kanvasAmmaPlayerName');
+  if(savedName) playerNameInput.value = savedName;
+
+  function startGame(){
+    const name = playerNameInput.value.trim();
+    if(name) localStorage.setItem('kanvasAmmaPlayerName', name);
+    coverScreen.hidden = true;
+    openGallery();
+    if(name) speak('Hai ' + name + '! Ayo lukis!');
+  }
+  startBtn.addEventListener('click', startGame);
+  playerNameInput.addEventListener('keydown', (e)=>{ if(e.key==='Enter') startGame(); });
+
+  // Show cover screen on first load
+  coverScreen.hidden = false;
   updateCursor(-100,-100);
 })();
 </script>
