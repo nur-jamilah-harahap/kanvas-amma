@@ -1,1008 +1,1662 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Kanvas Amma – Free Toddler Coloring & Painting Game</title>
-<meta name="description" content="Kanvas Amma is a free, interactive coloring and painting game for toddlers and preschoolers. Kids can pick a picture — elephant, cat, lion, fish, butterfly, parrot, or ladybug — and paint it with big colorful brushes, a magic fill bucket, and fun stamps. Works on computer, tablet, and phone.">
-<meta name="keywords" content="toddler painting game, kids coloring game, free coloring app for kids, preschool painting app, interactive coloring book, elephant coloring page, cat coloring page, parrot coloring page, ladybug coloring page, kids drawing game, kanvas amma">
-<meta name="author" content="Kanvas Amma">
-<meta name="robots" content="index, follow">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<meta name="theme-color" content="#6C4AB6">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kanvas Amma – Free Toddler Coloring & Painting Game</title>
+    <meta
+      name="description"
+      content="Kanvas Amma, game mewarnai gratis untuk balita. Pilih gambar hewan, warnai pakai kuas besar, ember ajaib, dan stempel lucu. Jalan di HP, tablet, komputer."
+    />
+    <meta
+      name="keywords"
+      content="game mewarnai balita, game mewarnai anak, aplikasi mewarnai gratis, aplikasi melukis prasekolah, buku mewarnai interaktif, halaman mewarnai gajah, halaman mewarnai kucing, halaman mewarnai burung beo, halaman mewarnai kepik, game menggambar anak, kanvas amma"
+    />
+    <meta name="author" content="Kanvas Amma" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#6C4AB6" />
 
-<!-- Add to Home Screen / PWA support -->
-<link rel="manifest" href="manifest.json">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Kanvas Amma">
-<meta name="application-name" content="Kanvas Amma">
+    <!-- Add to Home Screen / PWA support -->
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon-32.png"
+    />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Kanvas Amma" />
+    <meta name="application-name" content="Kanvas Amma" />
 
-<!-- Open Graph / social preview -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kanvas Amma – Free Toddler Coloring & Painting Game">
-<meta property="og:description" content="Pick a picture — elephant, cat, lion, fish, butterfly, parrot, or ladybug — and paint it with big colorful brushes, a magic fill bucket, and fun stamps. Built for little fingers on any device.">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kanvas Amma">
-<meta name="twitter:description" content="A free interactive coloring and painting game for toddlers. Pick a picture, splash on color, hear it come alive.">
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Kanvas Amma – Game Mewarnai & Melukis Gratis untuk Balita"
+    />
+    <meta
+      property="og:description"
+      content="Pilih gambar — gajah, kucing, singa, ikan, kupu-kupu, burung beo, atau kepik — lalu warnai dengan kuas besar warna-warni, ember ajaib, dan stempel lucu. Dibuat khusus untuk jari-jari kecil di semua perangkat."
+    />
+    <meta
+      property="og:image"
+      content="https://nur-jamilah-harahap.github.io/kanvas-amma/kanvas-amma-repo-card-id.png"
+    />
+    <meta
+      property="og:url"
+      content="https://nur-jamilah-harahap.github.io/kanvas-amma/"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kanvas Amma" />
+    <meta
+      name="twitter:description"
+      content="Game mewarnai dan melukis interaktif gratis untuk balita. Pilih gambar, sapukan warna, dan lihat gambarnya hidup."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nur-jamilah-harahap.github.io/kanvas-amma/kanvas-amma-repo-card-id.png"
+    />
 
-<!-- Structured data for search engines -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Game",
-  "name": "Kanvas Amma",
-  "description": "A free interactive coloring and painting game for toddlers and preschoolers. Choose a picture, paint with big brushes and stamps, and use the magic fill bucket to bring animals to life.",
-  "genre": "Educational, Coloring, Painting",
-  "audience": { "@type": "PeopleAudience", "suggestedMinAge": "2", "suggestedMaxAge": "6" },
-  "applicationCategory": "Game",
-  "operatingSystem": "Any (web browser)"
-}
-</script>
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Kanvas Amma",
+        "description": "A free interactive coloring and painting game for toddlers and preschoolers. Choose a picture, paint with big brushes and stamps, and use the magic fill bucket to bring animals to life.",
+        "genre": "Educational, Coloring, Painting",
+        "audience": {
+          "@type": "PeopleAudience",
+          "suggestedMinAge": "2",
+          "suggestedMaxAge": "6"
+        },
+        "applicationCategory": "Game",
+        "operatingSystem": "Any (web browser)"
+      }
+    </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --sky:#BFE7FF;
-    --sun:#FFD84D;
-    --grass:#7ED957;
-    --berry:#FF5C7A;
-    --plum:#6C4AB6;
-    --ink:#2B2138;
-    --cream:#FFF8EC;
-  }
-  *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; user-select:none; }
-  html,body{
-    margin:0; padding:0; height:100%; overflow:hidden;
-    font-family:'Baloo 2', sans-serif;
-    background:var(--sky);
-    touch-action:none;
-  }
-  .visually-hidden{
-    position:absolute; width:1px; height:1px; overflow:hidden;
-    clip:rect(0 0 0 0); white-space:nowrap;
-  }
-  #app{
-    position:relative;
-    height:100vh; height:100dvh;
-    width:100vw;
-    display:flex;
-    flex-direction:column;
-    background: linear-gradient(var(--sky), #E7F6FF 60%, #F3FFEA);
-    overflow:hidden;
-  }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --sky: #bfe7ff;
+        --sun: #ffd84d;
+        --grass: #7ed957;
+        --berry: #ff5c7a;
+        --plum: #6c4ab6;
+        --ink: #2b2138;
+        --cream: #fff8ec;
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        font-family: "Baloo 2", sans-serif;
+        background: var(--sky);
+        touch-action: none;
+      }
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+      }
+      #app {
+        position: relative;
+        height: 100vh;
+        height: 100dvh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(var(--sky), #e7f6ff 60%, #f3ffea);
+        overflow: hidden;
+      }
 
-  /* ---------- Header / top bar ---------- */
-  header#topbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:10px 12px;
-    gap:8px;
-    flex-shrink:0;
-    z-index:5;
-  }
-  #title{
-    font-weight:800;
-    font-size:clamp(18px,4vw,30px);
-    color:var(--plum);
-    text-shadow: 2px 2px 0 #fff, 0 3px 0 rgba(0,0,0,0.08);
-    display:flex; align-items:center; gap:6px;
-    letter-spacing:0.5px;
-    margin:0;
-  }
-  #topRight{ display:flex; gap:10px; }
-  .iconbtn{
-    border:none;
-    border-radius:50%;
-    width:54px; height:54px;
-    display:flex; align-items:center; justify-content:center;
-    font-size:24px;
-    cursor:pointer;
-    box-shadow: 0 5px 0 rgba(0,0,0,0.18), 0 8px 14px rgba(0,0,0,0.12);
-    transition: transform .08s ease;
-    flex-shrink:0;
-  }
-  .iconbtn:active{ transform: translateY(4px); box-shadow:0 1px 0 rgba(0,0,0,0.18); }
-  #galleryBtn{ background:#fff; }
-  #newBtn{ background:var(--berry); }
-  #undoBtn{ background:#FF914D; }
-  #saveBtn{ background:var(--grass); }
+      /* ---------- Header / top bar ---------- */
+      header#topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+        gap: 8px;
+        flex-shrink: 0;
+        z-index: 5;
+      }
+      #title {
+        font-weight: 800;
+        font-size: clamp(18px, 4vw, 30px);
+        color: var(--plum);
+        text-shadow:
+          2px 2px 0 #fff,
+          0 3px 0 rgba(0, 0, 0, 0.08);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        letter-spacing: 0.5px;
+        margin: 0;
+      }
+      #topRight {
+        display: flex;
+        gap: 10px;
+      }
+      .iconbtn {
+        border: none;
+        border-radius: 50%;
+        width: 54px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow:
+          0 5px 0 rgba(0, 0, 0, 0.18),
+          0 8px 14px rgba(0, 0, 0, 0.12);
+        transition: transform 0.08s ease;
+        flex-shrink: 0;
+      }
+      .iconbtn:active {
+        transform: translateY(4px);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
+      }
+      #galleryBtn {
+        background: #fff;
+      }
+      #newBtn {
+        background: var(--berry);
+      }
+      #undoBtn {
+        background: #ff914d;
+      }
+      #saveBtn {
+        background: var(--grass);
+      }
 
-  /* ---------- Main / canvas ---------- */
-  main{
-    position:relative;
-    flex:1;
-    min-height:0;
-    display:flex;
-    flex-direction:column;
-  }
-  #canvasWrap{
-    position:relative;
-    flex:1;
-    min-height:0;
-    margin:0 10px 10px 10px;
-    border-radius:28px;
-    overflow:hidden;
-    background:var(--cream);
-    box-shadow: inset 0 0 0 6px #fff, 0 10px 0 rgba(108,74,182,0.25);
-  }
-  canvas{
-    position:absolute; top:0; left:0;
-    width:100%; height:100%;
-    display:block;
-  }
-  #paintCanvas{ z-index:1; cursor:none; }
-  #outlineCanvas{ z-index:2; pointer-events:none; }
-  #cursorDot{
-    position:absolute;
-    width:0; height:0;
-    border-radius:50%;
-    pointer-events:none;
-    transform:translate(-50%,-50%);
-    z-index:4;
-    border:3px solid rgba(255,255,255,0.9);
-    box-shadow:0 0 0 2px rgba(0,0,0,0.15);
-    transition: width .06s, height .06s, background .1s;
-  }
+      /* ---------- Main / canvas ---------- */
+      main {
+        position: relative;
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      #canvasWrap {
+        position: relative;
+        flex: 1;
+        min-height: 0;
+        margin: 0 10px 10px 10px;
+        border-radius: 28px;
+        overflow: hidden;
+        background: var(--cream);
+        box-shadow:
+          inset 0 0 0 6px #fff,
+          0 10px 0 rgba(108, 74, 182, 0.25);
+      }
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      #paintCanvas {
+        z-index: 1;
+        cursor: none;
+      }
+      #outlineCanvas {
+        z-index: 2;
+        pointer-events: none;
+      }
+      #cursorDot {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        border: 3px solid rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+        transition:
+          width 0.06s,
+          height 0.06s,
+          background 0.1s;
+      }
 
-  /* ---------- Bottom tray (toolbar) ---------- */
-  #tray{
-    flex-shrink:0;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:10px 12px calc(10px + env(safe-area-inset-bottom));
-    overflow-x:auto;
-    overflow-y:hidden;
-    z-index:5;
-  }
-  #tray::-webkit-scrollbar{ display:none; }
+      /* ---------- Bottom tray (toolbar) ---------- */
+      #tray {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+        overflow-x: auto;
+        overflow-y: hidden;
+        z-index: 5;
+      }
+      #tray::-webkit-scrollbar {
+        display: none;
+      }
 
-  .swatch{
-    flex-shrink:0;
-    width:50px; height:50px;
-    border-radius:50%;
-    border:4px solid #fff;
-    box-shadow:0 5px 0 rgba(0,0,0,0.15);
-    cursor:pointer;
-    position:relative;
-    transition: transform .1s;
-    padding:0;
-  }
-  .swatch.selected{
-    transform: scale(1.18) translateY(-4px);
-    box-shadow:0 8px 0 rgba(0,0,0,0.18), 0 0 0 4px rgba(255,255,255,0.9) inset;
-  }
-  .swatch.selected::after{
-    content:"";
-    position:absolute; inset:-9px;
-    border-radius:50%;
-    border:3px dashed rgba(255,255,255,0.9);
-  }
+      .swatch {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        box-shadow: 0 5px 0 rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.1s;
+        padding: 0;
+      }
+      .swatch.selected {
+        transform: scale(1.18) translateY(-4px);
+        box-shadow:
+          0 8px 0 rgba(0, 0, 0, 0.18),
+          0 0 0 4px rgba(255, 255, 255, 0.9) inset;
+      }
+      .swatch.selected::after {
+        content: "";
+        position: absolute;
+        inset: -9px;
+        border-radius: 50%;
+        border: 3px dashed rgba(255, 255, 255, 0.9);
+      }
 
-  .divider{
-    flex-shrink:0;
-    width:2px; align-self:stretch;
-    margin:4px 2px;
-    background:rgba(43,33,56,0.15);
-    border-radius:2px;
-  }
+      .divider {
+        flex-shrink: 0;
+        width: 2px;
+        align-self: stretch;
+        margin: 4px 2px;
+        background: rgba(43, 33, 56, 0.15);
+        border-radius: 2px;
+      }
 
-  .toolbtn{
-    flex-shrink:0;
-    width:54px; height:54px;
-    border-radius:18px;
-    border:none;
-    background:#fff;
-    font-size:24px;
-    display:flex; align-items:center; justify-content:center;
-    box-shadow:0 5px 0 rgba(0,0,0,0.12);
-    cursor:pointer;
-    transition: transform .1s;
-  }
-  .toolbtn.selected{
-    background:var(--sun);
-    transform: translateY(-3px);
-    box-shadow:0 8px 0 rgba(0,0,0,0.15);
-  }
-  .toolbtn:active{ transform: translateY(3px); box-shadow:0 1px 0 rgba(0,0,0,0.12); }
+      .toolbtn {
+        flex-shrink: 0;
+        width: 54px;
+        height: 54px;
+        border-radius: 18px;
+        border: none;
+        background: #fff;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 0 rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        transition: transform 0.1s;
+      }
+      .toolbtn.selected {
+        background: var(--sun);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 0 rgba(0, 0, 0, 0.15);
+      }
+      .toolbtn:active {
+        transform: translateY(3px);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+      }
 
-  #brushSizeWrap{
-    flex-shrink:0;
-    display:flex;
-    align-items:center;
-    gap:6px;
-    background:#fff;
-    border-radius:20px;
-    padding:6px 10px;
-    box-shadow:0 5px 0 rgba(0,0,0,0.1);
-  }
-  .sizeDot{
-    border-radius:50%;
-    background:var(--ink);
-    cursor:pointer;
-    border:3px solid transparent;
-    padding:0;
-  }
-  .sizeDot.selected{ border-color:var(--sun); }
+      #brushSizeWrap {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: #fff;
+        border-radius: 20px;
+        padding: 6px 10px;
+        box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
+      }
+      .sizeDot {
+        border-radius: 50%;
+        background: var(--ink);
+        cursor: pointer;
+        border: 3px solid transparent;
+        padding: 0;
+      }
+      .sizeDot.selected {
+        border-color: var(--sun);
+      }
 
-  /* ---------- Gallery overlay ---------- */
-  #galleryOverlay{
-    position:absolute; inset:0;
-    background:rgba(43,33,56,0.55);
-    backdrop-filter: blur(2px);
-    z-index:30;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:16px;
-  }
-  #galleryOverlay[hidden]{ display:none; }
-  .galleryCard{
-    background:var(--cream);
-    border-radius:32px;
-    padding:22px;
-    max-width:640px;
-    width:100%;
-    max-height:88vh;
-    overflow-y:auto;
-    box-shadow:0 14px 0 rgba(0,0,0,0.2);
-    text-align:center;
-  }
-  .galleryCard h2{
-    margin:0 0 14px 0;
-    color:var(--plum);
-    font-size:clamp(20px,4vw,28px);
-    font-weight:800;
-  }
-  .galleryGrid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(120px,1fr));
-    gap:14px;
-  }
-  .galleryItem{
-    border:none;
-    background:#fff;
-    border-radius:22px;
-    padding:16px 10px 12px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:6px;
-    cursor:pointer;
-    box-shadow:0 6px 0 rgba(0,0,0,0.12);
-    transition: transform .1s;
-  }
-  .galleryItem:active{ transform:translateY(4px); box-shadow:0 2px 0 rgba(0,0,0,0.12); }
-  .galleryItem .emoji{ font-size:44px; line-height:1; }
-  .galleryItem span.label{ font-weight:700; color:var(--ink); font-size:16px; }
-  .galleryItem.blank{ background:#F0EAFF; }
+      /* ---------- Gallery overlay ---------- */
+      #galleryOverlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(43, 33, 56, 0.55);
+        backdrop-filter: blur(2px);
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+      }
+      #galleryOverlay[hidden] {
+        display: none;
+      }
+      .galleryCard {
+        background: var(--cream);
+        border-radius: 32px;
+        padding: 22px;
+        max-width: 640px;
+        width: 100%;
+        max-height: 88vh;
+        overflow-y: auto;
+        box-shadow: 0 14px 0 rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+      .galleryCard h2 {
+        margin: 0 0 14px 0;
+        color: var(--plum);
+        font-size: clamp(20px, 4vw, 28px);
+        font-weight: 800;
+      }
+      .galleryGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 14px;
+      }
+      .galleryItem {
+        border: none;
+        background: #fff;
+        border-radius: 22px;
+        padding: 16px 10px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12);
+        transition: transform 0.1s;
+      }
+      .galleryItem:active {
+        transform: translateY(4px);
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
+      }
+      .galleryItem .emoji {
+        font-size: 44px;
+        line-height: 1;
+      }
+      .galleryItem span.label {
+        font-weight: 700;
+        color: var(--ink);
+        font-size: 16px;
+      }
+      .galleryItem.blank {
+        background: #f0eaff;
+      }
 
-  /* Confetti */
-  .confetti{
-    position:absolute;
-    top:-20px;
-    pointer-events:none;
-    border-radius:2px;
-    z-index:40;
-    animation: fall linear forwards;
-  }
-  @keyframes fall{
-    to{ transform: translateY(110vh) rotate(540deg); opacity:0.9; }
-  }
+      /* Confetti */
+      .confetti {
+        position: absolute;
+        top: -20px;
+        pointer-events: none;
+        border-radius: 2px;
+        z-index: 40;
+        animation: fall linear forwards;
+      }
+      @keyframes fall {
+        to {
+          transform: translateY(110vh) rotate(540deg);
+          opacity: 0.9;
+        }
+      }
 
-  /* Toast */
-  #toast{
-    position:absolute;
-    left:50%; top:18px;
-    transform:translateX(-50%) translateY(-40px);
-    background:var(--plum);
-    color:#fff;
-    font-weight:700;
-    font-size:18px;
-    padding:10px 22px;
-    border-radius:30px;
-    box-shadow:0 6px 0 rgba(0,0,0,0.15);
-    opacity:0;
-    transition: all .25s ease;
-    z-index:20;
-    white-space:nowrap;
-  }
-  #toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+      /* Toast */
+      #toast {
+        position: absolute;
+        left: 50%;
+        top: 18px;
+        transform: translateX(-50%) translateY(-40px);
+        background: var(--plum);
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        padding: 10px 22px;
+        border-radius: 30px;
+        box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        transition: all 0.25s ease;
+        z-index: 20;
+        white-space: nowrap;
+      }
+      #toast.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
 
-  /* Cover Screen */
-  #coverScreen{
-    position:absolute; inset:0;
-    background: linear-gradient(135deg, var(--sky) 0%, #E7F6FF 40%, #F3FFEA 100%);
-    z-index:50;
-    display:flex; align-items:center; justify-content:center;
-    padding:16px;
-  }
-  #coverScreen[hidden]{ display:none; }
-  .coverCard{
-    background:var(--cream);
-    border-radius:36px;
-    padding:28px 22px 24px;
-    max-width:420px; width:100%;
-    text-align:center;
-    box-shadow:0 14px 0 rgba(0,0,0,0.18), 0 20px 40px rgba(0,0,0,0.12);
-    display:flex; flex-direction:column; align-items:center; gap:14px;
-  }
-  .coverArt{
-    display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
-    font-size:36px; line-height:1;
-  }
-  .emojiFloat{
-    display:inline-block;
-    animation: floatUp 2.4s ease-in-out infinite;
-  }
-  @keyframes floatUp{
-    0%,100%{ transform: translateY(0); }
-    50%{ transform: translateY(-10px); }
-  }
-  .coverCard h1{
-    margin:0; color:var(--plum); font-weight:800;
-    font-size:clamp(26px,7vw,42px);
-    text-shadow: 2px 2px 0 #fff, 0 3px 0 rgba(0,0,0,0.08);
-  }
-  .coverSub{
-    margin:0; color:var(--ink); font-weight:700;
-    font-size:clamp(16px,4vw,22px); opacity:0.8;
-  }
-  .nameLabel{
-    font-weight:700; color:var(--ink); font-size:18px;
-    margin:0; align-self:flex-start;
-  }
-  #playerName{
-    width:100%; padding:14px 16px;
-    border-radius:20px; border:4px solid #fff;
-    font-family:'Baloo 2', sans-serif;
-    font-size:20px; font-weight:700;
-    background:#fff; color:var(--ink);
-    box-shadow:0 5px 0 rgba(0,0,0,0.12);
-    outline:none; text-align:center;
-    transition: transform .1s, border-color .15s;
-  }
-  #playerName:focus{ border-color:var(--sun); transform: translateY(-2px); }
-  #playerName::placeholder{ color:rgba(43,33,56,0.35); }
-  .startBtn{
-    border:none; border-radius:24px;
-    padding:16px 32px;
-    background:var(--grass); color:#fff;
-    font-family:'Baloo 2', sans-serif;
-    font-size:clamp(20px,5vw,26px); font-weight:800;
-    cursor:pointer;
-    box-shadow:0 6px 0 rgba(0,0,0,0.18), 0 10px 20px rgba(0,0,0,0.1);
-    transition: transform .1s;
-    width:100%;
-  }
-  .startBtn:active{ transform: translateY(4px); box-shadow:0 2px 0 rgba(0,0,0,0.18); }
-  .startBtn:disabled{ opacity:0.6; cursor:not-allowed; }
+      /* Cover Screen */
+      #coverScreen {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          var(--sky) 0%,
+          #e7f6ff 40%,
+          #f3ffea 100%
+        );
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+      }
+      #coverScreen[hidden] {
+        display: none;
+      }
+      .coverCard {
+        background: var(--cream);
+        border-radius: 36px;
+        padding: 28px 22px 24px;
+        max-width: 420px;
+        width: 100%;
+        text-align: center;
+        box-shadow:
+          0 14px 0 rgba(0, 0, 0, 0.18),
+          0 20px 40px rgba(0, 0, 0, 0.12);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+      }
+      .coverArt {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 36px;
+        line-height: 1;
+      }
+      .emojiFloat {
+        display: inline-block;
+        animation: floatUp 2.4s ease-in-out infinite;
+      }
+      @keyframes floatUp {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .coverCard h1 {
+        margin: 0;
+        color: var(--plum);
+        font-weight: 800;
+        font-size: clamp(26px, 7vw, 42px);
+        text-shadow:
+          2px 2px 0 #fff,
+          0 3px 0 rgba(0, 0, 0, 0.08);
+      }
+      .coverSub {
+        margin: 0;
+        color: var(--ink);
+        font-weight: 700;
+        font-size: clamp(16px, 4vw, 22px);
+        opacity: 0.8;
+      }
+      .nameLabel {
+        font-weight: 700;
+        color: var(--ink);
+        font-size: 18px;
+        margin: 0;
+        align-self: flex-start;
+      }
+      #playerName {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 20px;
+        border: 4px solid #fff;
+        font-family: "Baloo 2", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        background: #fff;
+        color: var(--ink);
+        box-shadow: 0 5px 0 rgba(0, 0, 0, 0.12);
+        outline: none;
+        text-align: center;
+        transition:
+          transform 0.1s,
+          border-color 0.15s;
+      }
+      #playerName:focus {
+        border-color: var(--sun);
+        transform: translateY(-2px);
+      }
+      #playerName::placeholder {
+        color: rgba(43, 33, 56, 0.35);
+      }
+      .startBtn {
+        border: none;
+        border-radius: 24px;
+        padding: 16px 32px;
+        background: var(--grass);
+        color: #fff;
+        font-family: "Baloo 2", sans-serif;
+        font-size: clamp(20px, 5vw, 26px);
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow:
+          0 6px 0 rgba(0, 0, 0, 0.18),
+          0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.1s;
+        width: 100%;
+      }
+      .startBtn:active {
+        transform: translateY(4px);
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.18);
+      }
+      .startBtn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
 
-  footer#seoFooter{
-    font-size:11px;
-    color:rgba(43,33,56,0.35);
-    text-align:center;
-    padding:2px 8px 4px;
-    flex-shrink:0;
-  }
+      footer#seoFooter {
+        font-size: 11px;
+        color: rgba(43, 33, 56, 0.35);
+        text-align: center;
+        padding: 2px 8px 4px;
+        flex-shrink: 0;
+      }
 
-  @media (max-width:480px){
-    #title span.label{ display:none; }
-    .iconbtn{ width:46px; height:46px; font-size:20px; }
-    .swatch{ width:44px; height:44px; }
-    .toolbtn{ width:46px; height:46px; font-size:20px; }
-  }
-</style>
-</head>
-<body>
-<div id="app">
-  <div id="coverScreen" role="dialog" aria-modal="true" aria-labelledby="coverTitle">
-    <div class="coverCard">
-      <div class="coverArt" aria-hidden="true">
-        <span class="emojiFloat">🖌️</span>
-        <span class="emojiFloat" style="animation-delay:0.3s">🎨</span>
-        <span class="emojiFloat" style="animation-delay:0.6s">🦋</span>
-        <span class="emojiFloat" style="animation-delay:0.9s">🐱</span>
-        <span class="emojiFloat" style="animation-delay:1.2s">⭐</span>
-      </div>
-      <h1 id="coverTitle">Kanvas Amma</h1>
-      <p class="coverSub">Ayo lukis dan bermain!</p>
-      <label class="nameLabel" for="playerName">Siapa namamu?</label>
-      <input id="playerName" type="text" placeholder="Masukkan nama..." maxlength="20" autocomplete="off">
-      <button id="startBtn" class="startBtn">Mulai 🚀</button>
-    </div>
-  </div>
-
-  <header id="topbar">
-    <h1 id="title">🖌️ <span class="label">Kanvas Amma</span></h1>
-    <div id="topRight">
-      <button class="iconbtn" id="galleryBtn" aria-label="Choose a picture to paint">🖼️</button>
-      <button class="iconbtn" id="newBtn" aria-label="Clear the painting">🗑️</button>
-      <button class="iconbtn" id="undoBtn" aria-label="Undo last stroke">↩️</button>
-      <button class="iconbtn" id="saveBtn" aria-label="Save my painting">⬇️</button>
-    </div>
-  </header>
-
-  <main>
-    <section id="canvasWrap" aria-label="Painting area">
-      <canvas id="paintCanvas"></canvas>
-      <canvas id="outlineCanvas"></canvas>
-      <div id="cursorDot"></div>
-    </section>
-
-    <nav id="tray" role="toolbar" aria-label="Painting tools">
-      <button class="swatch selected" data-color="#FF5C7A" style="background:#FF5C7A" aria-label="Pink color"></button>
-      <button class="swatch" data-color="#FFD84D" style="background:#FFD84D" aria-label="Yellow color"></button>
-      <button class="swatch" data-color="#7ED957" style="background:#7ED957" aria-label="Green color"></button>
-      <button class="swatch" data-color="#4DB6FF" style="background:#4DB6FF" aria-label="Blue color"></button>
-      <button class="swatch" data-color="#6C4AB6" style="background:#6C4AB6" aria-label="Purple color"></button>
-      <button class="swatch" data-color="#FF914D" style="background:#FF914D" aria-label="Orange color"></button>
-      <button class="swatch" data-color="#FF7EDB" style="background:#FF7EDB" aria-label="Bubblegum color"></button>
-      <button class="swatch" data-color="#2B2138" style="background:#2B2138" aria-label="Black color"></button>
-      <button class="swatch" data-color="#FFFFFF" style="background:#FFFFFF; box-shadow:0 5px 0 rgba(0,0,0,0.15), inset 0 0 0 2px #eee;" aria-label="White color"></button>
-      <button class="swatch" data-color="rainbow" style="background:conic-gradient(red,orange,yellow,green,blue,violet,red)" aria-label="Rainbow color"></button>
-
-      <div class="divider"></div>
-
-      <div id="brushSizeWrap">
-        <button class="sizeDot selected" data-size="14" style="width:14px;height:14px;" aria-label="Small brush"></button>
-        <button class="sizeDot" data-size="24" style="width:24px;height:24px;" aria-label="Medium brush"></button>
-        <button class="sizeDot" data-size="40" style="width:36px;height:36px;" aria-label="Large brush"></button>
-      </div>
-
-      <div class="divider"></div>
-
-      <button class="toolbtn selected" data-tool="brush" aria-label="Brush tool">🖌️</button>
-      <button class="toolbtn" data-tool="fill" aria-label="Fill bucket tool">🪣</button>
-      <button class="toolbtn" data-tool="star" aria-label="Star stamp">⭐</button>
-      <button class="toolbtn" data-tool="heart" aria-label="Heart stamp">💗</button>
-      <button class="toolbtn" data-tool="flower" aria-label="Flower stamp">🌸</button>
-      <button class="toolbtn" data-tool="sun" aria-label="Sun stamp">☀️</button>
-      <button class="toolbtn" data-tool="paw" aria-label="Paw stamp">🐾</button>
-    </nav>
-
-    <div id="toast" role="status" aria-live="polite"></div>
-
-    <div id="galleryOverlay" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
-      <div class="galleryCard">
-        <h2 id="galleryTitle">Pick a picture to paint! 🎨</h2>
-        <div class="galleryGrid">
-          <button class="galleryItem" data-animal="elephant"><span class="emoji" aria-hidden="true">🐘</span><span class="label">Elephant</span></button>
-          <button class="galleryItem" data-animal="cat"><span class="emoji" aria-hidden="true">🐱</span><span class="label">Cat</span></button>
-          <button class="galleryItem" data-animal="lion"><span class="emoji" aria-hidden="true">🦁</span><span class="label">Lion</span></button>
-          <button class="galleryItem" data-animal="fish"><span class="emoji" aria-hidden="true">🐟</span><span class="label">Fish</span></button>
-          <button class="galleryItem" data-animal="butterfly"><span class="emoji" aria-hidden="true">🦋</span><span class="label">Butterfly</span></button>
-          <button class="galleryItem" data-animal="parrot"><span class="emoji" aria-hidden="true">🦜</span><span class="label">Parrot</span></button>
-          <button class="galleryItem" data-animal="ladybug"><span class="emoji" aria-hidden="true">🐞</span><span class="label">Ladybug</span></button>
-          <button class="galleryItem blank" data-animal="blank"><span class="emoji" aria-hidden="true">📄</span><span class="label">Blank Page</span></button>
+      @media (max-width: 480px) {
+        #title span.label {
+          display: none;
+        }
+        .iconbtn {
+          width: 46px;
+          height: 46px;
+          font-size: 20px;
+        }
+        .swatch {
+          width: 44px;
+          height: 44px;
+        }
+        .toolbtn {
+          width: 46px;
+          height: 46px;
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div
+        id="coverScreen"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="coverTitle"
+      >
+        <div class="coverCard">
+          <div class="coverArt" aria-hidden="true">
+            <span class="emojiFloat">🖌️</span>
+            <span class="emojiFloat" style="animation-delay: 0.3s">🎨</span>
+            <span class="emojiFloat" style="animation-delay: 0.6s">🦋</span>
+            <span class="emojiFloat" style="animation-delay: 0.9s">🐱</span>
+            <span class="emojiFloat" style="animation-delay: 1.2s">⭐</span>
+          </div>
+          <h1 id="coverTitle">Kanvas Amma</h1>
+          <p class="coverSub">Ayo lukis dan bermain!</p>
+          <label class="nameLabel" for="playerName">Siapa namamu?</label>
+          <input
+            id="playerName"
+            type="text"
+            placeholder="Masukkan nama..."
+            maxlength="20"
+            autocomplete="off"
+          />
+          <button id="startBtn" class="startBtn">Mulai 🚀</button>
         </div>
       </div>
+
+      <header id="topbar">
+        <h1 id="title">🖌️ <span class="label">Kanvas Amma</span></h1>
+        <div id="topRight">
+          <button
+            class="iconbtn"
+            id="galleryBtn"
+            aria-label="Choose a picture to paint"
+          >
+            🖼️
+          </button>
+          <button class="iconbtn" id="newBtn" aria-label="Clear the painting">
+            🗑️
+          </button>
+          <button class="iconbtn" id="undoBtn" aria-label="Undo last stroke">
+            ↩️
+          </button>
+          <button class="iconbtn" id="saveBtn" aria-label="Save my painting">
+            ⬇️
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section id="canvasWrap" aria-label="Painting area">
+          <canvas id="paintCanvas"></canvas>
+          <canvas id="outlineCanvas"></canvas>
+          <div id="cursorDot"></div>
+        </section>
+
+        <nav id="tray" role="toolbar" aria-label="Painting tools">
+          <button
+            class="swatch selected"
+            data-color="#FF5C7A"
+            style="background: #ff5c7a"
+            aria-label="Pink color"
+          ></button>
+          <button
+            class="swatch"
+            data-color="#FFD84D"
+            style="background: #ffd84d"
+            aria-label="Yellow color"
+          ></button>
+          <button
+            class="swatch"
+            data-color="#7ED957"
+            style="background: #7ed957"
+            aria-label="Green color"
+          ></button>
+          <button
+            class="swatch"
+            data-color="#4DB6FF"
+            style="background: #4db6ff"
+            aria-label="Blue color"
+          ></button>
+          <button
+            class="swatch"
+            data-color="#6C4AB6"
+            style="background: #6c4ab6"
+            aria-label="Purple color"
+          ></button>
+          <button
+            class="swatch"
+            data-color="#FF914D"
+            style="background: #ff914d"
+            aria-label="Orange color"
+          ></button>
+          <button
+            class="swatch"
+            data-color="#FF7EDB"
+            style="background: #ff7edb"
+            aria-label="Bubblegum color"
+          ></button>
+          <button
+            class="swatch"
+            data-color="#2B2138"
+            style="background: #2b2138"
+            aria-label="Black color"
+          ></button>
+          <button
+            class="swatch"
+            data-color="#FFFFFF"
+            style="
+              background: #ffffff;
+              box-shadow:
+                0 5px 0 rgba(0, 0, 0, 0.15),
+                inset 0 0 0 2px #eee;
+            "
+            aria-label="White color"
+          ></button>
+          <button
+            class="swatch"
+            data-color="rainbow"
+            style="
+              background: conic-gradient(
+                red,
+                orange,
+                yellow,
+                green,
+                blue,
+                violet,
+                red
+              );
+            "
+            aria-label="Rainbow color"
+          ></button>
+
+          <div class="divider"></div>
+
+          <div id="brushSizeWrap">
+            <button
+              class="sizeDot selected"
+              data-size="14"
+              style="width: 14px; height: 14px"
+              aria-label="Small brush"
+            ></button>
+            <button
+              class="sizeDot"
+              data-size="24"
+              style="width: 24px; height: 24px"
+              aria-label="Medium brush"
+            ></button>
+            <button
+              class="sizeDot"
+              data-size="40"
+              style="width: 36px; height: 36px"
+              aria-label="Large brush"
+            ></button>
+          </div>
+
+          <div class="divider"></div>
+
+          <button
+            class="toolbtn selected"
+            data-tool="brush"
+            aria-label="Brush tool"
+          >
+            🖌️
+          </button>
+          <button
+            class="toolbtn"
+            data-tool="fill"
+            aria-label="Fill bucket tool"
+          >
+            🪣
+          </button>
+          <button class="toolbtn" data-tool="star" aria-label="Star stamp">
+            ⭐
+          </button>
+          <button class="toolbtn" data-tool="heart" aria-label="Heart stamp">
+            💗
+          </button>
+          <button class="toolbtn" data-tool="flower" aria-label="Flower stamp">
+            🌸
+          </button>
+          <button class="toolbtn" data-tool="sun" aria-label="Sun stamp">
+            ☀️
+          </button>
+          <button class="toolbtn" data-tool="paw" aria-label="Paw stamp">
+            🐾
+          </button>
+        </nav>
+
+        <div id="toast" role="status" aria-live="polite"></div>
+
+        <div
+          id="galleryOverlay"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="galleryTitle"
+        >
+          <div class="galleryCard">
+            <h2 id="galleryTitle">Pick a picture to paint! 🎨</h2>
+            <div class="galleryGrid">
+              <button class="galleryItem" data-animal="elephant">
+                <span class="emoji" aria-hidden="true">🐘</span
+                ><span class="label">Elephant</span>
+              </button>
+              <button class="galleryItem" data-animal="cat">
+                <span class="emoji" aria-hidden="true">🐱</span
+                ><span class="label">Cat</span>
+              </button>
+              <button class="galleryItem" data-animal="lion">
+                <span class="emoji" aria-hidden="true">🦁</span
+                ><span class="label">Lion</span>
+              </button>
+              <button class="galleryItem" data-animal="fish">
+                <span class="emoji" aria-hidden="true">🐟</span
+                ><span class="label">Fish</span>
+              </button>
+              <button class="galleryItem" data-animal="butterfly">
+                <span class="emoji" aria-hidden="true">🦋</span
+                ><span class="label">Butterfly</span>
+              </button>
+              <button class="galleryItem" data-animal="parrot">
+                <span class="emoji" aria-hidden="true">🦜</span
+                ><span class="label">Parrot</span>
+              </button>
+              <button class="galleryItem" data-animal="ladybug">
+                <span class="emoji" aria-hidden="true">🐞</span
+                ><span class="label">Ladybug</span>
+              </button>
+              <button class="galleryItem blank" data-animal="blank">
+                <span class="emoji" aria-hidden="true">📄</span
+                ><span class="label">Blank Page</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer id="seoFooter">
+        Splash Paint — a free interactive coloring and painting game for
+        toddlers. Pick an elephant, cat, penguin, lion, fish, or butterfly and
+        paint it on any computer, tablet, or phone.
+      </footer>
     </div>
-  </main>
 
-  <footer id="seoFooter">
-    Splash Paint — a free interactive coloring and painting game for toddlers. Pick an elephant, cat, penguin, lion, fish, or butterfly and paint it on any computer, tablet, or phone.
-  </footer>
-</div>
+    <script>
+      (function () {
+        const paintCanvas = document.getElementById("paintCanvas");
+        const outlineCanvas = document.getElementById("outlineCanvas");
+        const pctx = paintCanvas.getContext("2d", { willReadFrequently: true });
+        const octx = outlineCanvas.getContext("2d");
+        const wrap = document.getElementById("canvasWrap");
+        const cursorDot = document.getElementById("cursorDot");
+        const toast = document.getElementById("toast");
+        const galleryOverlay = document.getElementById("galleryOverlay");
 
-<script>
-(function(){
-  const paintCanvas = document.getElementById('paintCanvas');
-  const outlineCanvas = document.getElementById('outlineCanvas');
-  const pctx = paintCanvas.getContext('2d', { willReadFrequently:true });
-  const octx = outlineCanvas.getContext('2d');
-  const wrap = document.getElementById('canvasWrap');
-  const cursorDot = document.getElementById('cursorDot');
-  const toast = document.getElementById('toast');
-  const galleryOverlay = document.getElementById('galleryOverlay');
+        let color = "#FF5C7A";
+        let brushSize = 14;
+        let tool = "brush";
+        let drawing = false;
+        let lastX = 0,
+          lastY = 0;
+        let currentAnimal = null;
 
-  let color = '#FF5C7A';
-  let brushSize = 14;
-  let tool = 'brush';
-  let drawing = false;
-  let lastX = 0, lastY = 0;
-  let currentAnimal = null;
+        const history = [];
+        const MAX_HISTORY = 30;
+        function saveSnapshot() {
+          history.push(paintCanvas.toDataURL());
+          if (history.length > MAX_HISTORY) history.shift();
+        }
+        function undo() {
+          if (history.length > 0) {
+            const img = new Image();
+            img.onload = () => {
+              pctx.clearRect(0, 0, paintCanvas.width, paintCanvas.height);
+              pctx.drawImage(img, 0, 0);
+            };
+            img.src = history.pop();
+            showToast("Undo! ↩️");
+            playPop(500);
+          }
+        }
 
-  const history = [];
-  const MAX_HISTORY = 30;
-  function saveSnapshot(){
-    history.push(paintCanvas.toDataURL());
-    if(history.length > MAX_HISTORY) history.shift();
-  }
-  function undo(){
-    if(history.length > 0){
-      const img = new Image();
-      img.onload = ()=>{
-        pctx.clearRect(0,0,paintCanvas.width,paintCanvas.height);
-        pctx.drawImage(img,0,0);
-      };
-      img.src = history.pop();
-      showToast('Undo! ↩️');
-      playPop(500);
-    }
-  }
+        const animalNames = {
+          elephant: "Elephant",
+          cat: "Cat",
+          lion: "Lion",
+          fish: "Fish",
+          butterfly: "Butterfly",
+          parrot: "Parrot",
+          ladybug: "Ladybug",
+        };
 
-  const animalNames = {
-    elephant:'Elephant', cat:'Cat', lion:'Lion',
-    fish:'Fish', butterfly:'Butterfly', parrot:'Parrot', ladybug:'Ladybug'
-  };
+        /* ================= AUDIO ================= */
+        let audioCtx;
+        function ensureAudio() {
+          if (!audioCtx) {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          }
+        }
+        function playPop(freq) {
+          ensureAudio();
+          const o = audioCtx.createOscillator();
+          const g = audioCtx.createGain();
+          o.type = "sine";
+          o.frequency.setValueAtTime(freq, audioCtx.currentTime);
+          o.frequency.exponentialRampToValueAtTime(
+            freq * 0.6,
+            audioCtx.currentTime + 0.15,
+          );
+          g.gain.setValueAtTime(0.18, audioCtx.currentTime);
+          g.gain.exponentialRampToValueAtTime(
+            0.001,
+            audioCtx.currentTime + 0.18,
+          );
+          o.connect(g);
+          g.connect(audioCtx.destination);
+          o.start();
+          o.stop(audioCtx.currentTime + 0.2);
+        }
+        function playSwish() {
+          ensureAudio();
+          const bufferSize = audioCtx.sampleRate * 0.08;
+          const buffer = audioCtx.createBuffer(
+            1,
+            bufferSize,
+            audioCtx.sampleRate,
+          );
+          const data = buffer.getChannelData(0);
+          for (let i = 0; i < bufferSize; i++) {
+            data[i] = (Math.random() * 2 - 1) * (1 - i / bufferSize);
+          }
+          const src = audioCtx.createBufferSource();
+          src.buffer = buffer;
+          const g = audioCtx.createGain();
+          g.gain.setValueAtTime(0.05, audioCtx.currentTime);
+          src.connect(g);
+          g.connect(audioCtx.destination);
+          src.start();
+        }
+        function speak(text) {
+          if (!("speechSynthesis" in window)) return;
+          try {
+            const u = new SpeechSynthesisUtterance(text);
+            u.rate = 0.85;
+            u.pitch = 1.3;
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(u);
+          } catch (e) {}
+        }
 
-  /* ================= AUDIO ================= */
-  let audioCtx;
-  function ensureAudio(){ if(!audioCtx){ audioCtx = new (window.AudioContext||window.webkitAudioContext)(); } }
-  function playPop(freq){
-    ensureAudio();
-    const o = audioCtx.createOscillator(); const g = audioCtx.createGain();
-    o.type='sine'; o.frequency.setValueAtTime(freq, audioCtx.currentTime);
-    o.frequency.exponentialRampToValueAtTime(freq*0.6, audioCtx.currentTime+0.15);
-    g.gain.setValueAtTime(0.18, audioCtx.currentTime);
-    g.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime+0.18);
-    o.connect(g); g.connect(audioCtx.destination);
-    o.start(); o.stop(audioCtx.currentTime+0.2);
-  }
-  function playSwish(){
-    ensureAudio();
-    const bufferSize = audioCtx.sampleRate*0.08;
-    const buffer = audioCtx.createBuffer(1,bufferSize,audioCtx.sampleRate);
-    const data = buffer.getChannelData(0);
-    for(let i=0;i<bufferSize;i++){ data[i]=(Math.random()*2-1)*(1-i/bufferSize); }
-    const src = audioCtx.createBufferSource(); src.buffer=buffer;
-    const g = audioCtx.createGain(); g.gain.setValueAtTime(0.05, audioCtx.currentTime);
-    src.connect(g); g.connect(audioCtx.destination); src.start();
-  }
-  function speak(text){
-    if(!('speechSynthesis' in window)) return;
-    try{
-      const u = new SpeechSynthesisUtterance(text);
-      u.rate = 0.85; u.pitch = 1.3;
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(u);
-    }catch(e){}
-  }
+        /* ================= CANVAS SIZING ================= */
+        function resizeCanvases() {
+          const rect = wrap.getBoundingClientRect();
+          const dpr = window.devicePixelRatio || 1;
 
-  /* ================= CANVAS SIZING ================= */
-  function resizeCanvases(){
-    const rect = wrap.getBoundingClientRect();
-    const dpr = window.devicePixelRatio||1;
+          const prev = document.createElement("canvas");
+          prev.width = paintCanvas.width;
+          prev.height = paintCanvas.height;
+          if (prev.width > 0)
+            prev.getContext("2d").drawImage(paintCanvas, 0, 0);
 
-    const prev = document.createElement('canvas');
-    prev.width = paintCanvas.width; prev.height = paintCanvas.height;
-    if(prev.width>0) prev.getContext('2d').drawImage(paintCanvas,0,0);
+          [paintCanvas, outlineCanvas].forEach((c) => {
+            c.width = rect.width * dpr;
+            c.height = rect.height * dpr;
+          });
+          pctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          octx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          pctx.lineCap = "round";
+          pctx.lineJoin = "round";
+          octx.lineCap = "round";
+          octx.lineJoin = "round";
 
-    [paintCanvas, outlineCanvas].forEach(c=>{
-      c.width = rect.width*dpr; c.height = rect.height*dpr;
-    });
-    pctx.setTransform(dpr,0,0,dpr,0,0);
-    octx.setTransform(dpr,0,0,dpr,0,0);
-    pctx.lineCap='round'; pctx.lineJoin='round';
-    octx.lineCap='round'; octx.lineJoin='round';
+          if (prev.width > 0) {
+            pctx.drawImage(
+              prev,
+              0,
+              0,
+              prev.width,
+              prev.height,
+              0,
+              0,
+              rect.width,
+              rect.height,
+            );
+          }
+          drawOutline(currentAnimal);
+        }
+        window.addEventListener("resize", resizeCanvases);
 
-    if(prev.width>0){
-      pctx.drawImage(prev,0,0,prev.width,prev.height,0,0,rect.width,rect.height);
-    }
-    drawOutline(currentAnimal);
-  }
-  window.addEventListener('resize', resizeCanvases);
-
-  /* ================= COLORING PAGE ART ================= */
-  function withOutlineTransform(fn){
-    const rect = wrap.getBoundingClientRect();
-    const cssW = rect.width, cssH = rect.height;
-    const s = Math.min(cssW,cssH)/300;
-    octx.save();
-    octx.translate(cssW/2, cssH/2);
-    octx.scale(s,s);
-    octx.translate(-150,-150);
-    octx.strokeStyle = '#2B2138';
-    octx.fillStyle = 'transparent';
-    octx.lineWidth = 6;
-    fn(octx);
-    octx.restore();
-  }
-  function ell(c,cx,cy,rx,ry,rot){ c.beginPath(); c.ellipse(cx,cy,rx,ry,rot||0,0,Math.PI*2); c.stroke(); }
-  function circ(c,cx,cy,r){ ell(c,cx,cy,r,r,0); }
-  function tri(c,x1,y1,x2,y2,x3,y3){ c.beginPath(); c.moveTo(x1,y1); c.lineTo(x2,y2); c.lineTo(x3,y3); c.closePath(); c.stroke(); }
-
-  const animalArt = {
-    elephant(c){
-      ell(c,160,190,85,65);              // body
-      circ(c,95,120,55);                 // head
-      ell(c,55,112,42,50,-0.15);         // ear
-      circ(c,80,110,5);                  // eye
-      c.beginPath(); c.moveTo(58,150); c.bezierCurveTo(35,180,30,205,45,225); c.bezierCurveTo(50,232,60,230,58,222); c.stroke(); // trunk
-      [110,140,190,220].forEach(x=>{ c.beginPath(); c.roundRect ? c.roundRect(x,225,24,42,8) : c.rect(x,225,24,42); c.stroke(); });
-      c.beginPath(); c.moveTo(245,190); c.quadraticCurveTo(265,205,255,230); c.stroke(); // tail
-    },
-    cat(c){
-      circ(c,150,120,65);                // head
-      tri(c,100,75,88,25,132,60);        // left ear
-      tri(c,200,75,212,25,168,60);       // right ear
-      circ(c,125,115,7); circ(c,175,115,7); // eyes
-      tri(c,142,140,158,140,150,152);    // nose
-      [ -1,1 ].forEach(sgn=>{
-        [0,-10,10].forEach(dy=>{
-          c.beginPath(); c.moveTo(150+sgn*35,150+dy*0.4); c.lineTo(150+sgn*80,145+dy); c.stroke();
-        });
-      });
-      ell(c,150,225,78,58);              // body
-      c.beginPath(); c.moveTo(220,235); c.bezierCurveTo(260,235,265,190,240,175); c.stroke(); // tail
-    },
-    parrot(c){
-      // tail feathers first, so the body overlaps them
-      c.beginPath(); c.moveTo(185,205); c.quadraticCurveTo(230,230,225,275); c.stroke();
-      c.beginPath(); c.moveTo(178,215); c.quadraticCurveTo(205,250,190,285); c.stroke();
-      c.beginPath(); c.moveTo(195,198); c.quadraticCurveTo(245,205,255,240); c.stroke();
-
-      ell(c,165,180,58,78);              // body
-      ell(c,182,168,26,50,0.35);         // wing
-      circ(c,148,98,44);                 // head
-
-      // crest feathers
-      c.beginPath(); c.moveTo(135,58); c.quadraticCurveTo(128,35,118,28); c.stroke();
-      c.beginPath(); c.moveTo(150,52); c.quadraticCurveTo(150,28,150,18); c.stroke();
-      c.beginPath(); c.moveTo(165,58); c.quadraticCurveTo(172,35,182,28); c.stroke();
-
-      // hooked beak
-      c.beginPath();
-      c.moveTo(118,92); c.quadraticCurveTo(92,100,96,124);
-      c.quadraticCurveTo(108,130,124,112); c.quadraticCurveTo(134,100,118,92);
-      c.stroke();
-
-      circ(c,132,88,6);                  // eye
-
-      // perch + feet
-      c.beginPath(); c.moveTo(100,285); c.lineTo(220,285); c.stroke();
-      c.beginPath(); c.moveTo(140,258); c.quadraticCurveTo(138,275,122,285); c.stroke();
-      c.beginPath(); c.moveTo(165,258); c.quadraticCurveTo(168,275,182,285); c.stroke();
-    },
-    ladybug(c){
-      ell(c,150,178,86,76);              // body dome
-      circ(c,150,96,38);                 // head
-      c.beginPath(); c.moveTo(150,112); c.lineTo(150,252); c.stroke(); // wing split
-
-      // spots
-      circ(c,113,150,12); circ(c,187,150,12);
-      circ(c,108,202,12); circ(c,192,202,12);
-      circ(c,150,228,12);
-
-      circ(c,136,90,5); circ(c,164,90,5); // eyes
-
-      // antennae
-      c.beginPath(); c.moveTo(133,66); c.quadraticCurveTo(115,42,104,36); c.stroke();
-      circ(c,104,36,4);
-      c.beginPath(); c.moveTo(167,66); c.quadraticCurveTo(185,42,196,36); c.stroke();
-      circ(c,196,36,4);
-
-      // little legs
-      [-1,1].forEach(sgn=>{
-        [150,190,225].forEach(y=>{
+        /* ================= COLORING PAGE ART ================= */
+        function withOutlineTransform(fn) {
+          const rect = wrap.getBoundingClientRect();
+          const cssW = rect.width,
+            cssH = rect.height;
+          const s = Math.min(cssW, cssH) / 300;
+          octx.save();
+          octx.translate(cssW / 2, cssH / 2);
+          octx.scale(s, s);
+          octx.translate(-150, -150);
+          octx.strokeStyle = "#2B2138";
+          octx.fillStyle = "transparent";
+          octx.lineWidth = 6;
+          fn(octx);
+          octx.restore();
+        }
+        function ell(c, cx, cy, rx, ry, rot) {
           c.beginPath();
-          c.moveTo(150+sgn*82, y);
-          c.lineTo(150+sgn*105, y+12);
+          c.ellipse(cx, cy, rx, ry, rot || 0, 0, Math.PI * 2);
           c.stroke();
+        }
+        function circ(c, cx, cy, r) {
+          ell(c, cx, cy, r, r, 0);
+        }
+        function tri(c, x1, y1, x2, y2, x3, y3) {
+          c.beginPath();
+          c.moveTo(x1, y1);
+          c.lineTo(x2, y2);
+          c.lineTo(x3, y3);
+          c.closePath();
+          c.stroke();
+        }
+
+        const animalArt = {
+          elephant(c) {
+            ell(c, 160, 190, 85, 65); // body
+            circ(c, 95, 120, 55); // head
+            ell(c, 55, 112, 42, 50, -0.15); // ear
+            circ(c, 80, 110, 5); // eye
+            c.beginPath();
+            c.moveTo(58, 150);
+            c.bezierCurveTo(35, 180, 30, 205, 45, 225);
+            c.bezierCurveTo(50, 232, 60, 230, 58, 222);
+            c.stroke(); // trunk
+            [110, 140, 190, 220].forEach((x) => {
+              c.beginPath();
+              c.roundRect
+                ? c.roundRect(x, 225, 24, 42, 8)
+                : c.rect(x, 225, 24, 42);
+              c.stroke();
+            });
+            c.beginPath();
+            c.moveTo(245, 190);
+            c.quadraticCurveTo(265, 205, 255, 230);
+            c.stroke(); // tail
+          },
+          cat(c) {
+            circ(c, 150, 120, 65); // head
+            tri(c, 100, 75, 88, 25, 132, 60); // left ear
+            tri(c, 200, 75, 212, 25, 168, 60); // right ear
+            circ(c, 125, 115, 7);
+            circ(c, 175, 115, 7); // eyes
+            tri(c, 142, 140, 158, 140, 150, 152); // nose
+            [-1, 1].forEach((sgn) => {
+              [0, -10, 10].forEach((dy) => {
+                c.beginPath();
+                c.moveTo(150 + sgn * 35, 150 + dy * 0.4);
+                c.lineTo(150 + sgn * 80, 145 + dy);
+                c.stroke();
+              });
+            });
+            ell(c, 150, 225, 78, 58); // body
+            c.beginPath();
+            c.moveTo(220, 235);
+            c.bezierCurveTo(260, 235, 265, 190, 240, 175);
+            c.stroke(); // tail
+          },
+          parrot(c) {
+            // tail feathers first, so the body overlaps them
+            c.beginPath();
+            c.moveTo(185, 205);
+            c.quadraticCurveTo(230, 230, 225, 275);
+            c.stroke();
+            c.beginPath();
+            c.moveTo(178, 215);
+            c.quadraticCurveTo(205, 250, 190, 285);
+            c.stroke();
+            c.beginPath();
+            c.moveTo(195, 198);
+            c.quadraticCurveTo(245, 205, 255, 240);
+            c.stroke();
+
+            ell(c, 165, 180, 58, 78); // body
+            ell(c, 182, 168, 26, 50, 0.35); // wing
+            circ(c, 148, 98, 44); // head
+
+            // crest feathers
+            c.beginPath();
+            c.moveTo(135, 58);
+            c.quadraticCurveTo(128, 35, 118, 28);
+            c.stroke();
+            c.beginPath();
+            c.moveTo(150, 52);
+            c.quadraticCurveTo(150, 28, 150, 18);
+            c.stroke();
+            c.beginPath();
+            c.moveTo(165, 58);
+            c.quadraticCurveTo(172, 35, 182, 28);
+            c.stroke();
+
+            // hooked beak
+            c.beginPath();
+            c.moveTo(118, 92);
+            c.quadraticCurveTo(92, 100, 96, 124);
+            c.quadraticCurveTo(108, 130, 124, 112);
+            c.quadraticCurveTo(134, 100, 118, 92);
+            c.stroke();
+
+            circ(c, 132, 88, 6); // eye
+
+            // perch + feet
+            c.beginPath();
+            c.moveTo(100, 285);
+            c.lineTo(220, 285);
+            c.stroke();
+            c.beginPath();
+            c.moveTo(140, 258);
+            c.quadraticCurveTo(138, 275, 122, 285);
+            c.stroke();
+            c.beginPath();
+            c.moveTo(165, 258);
+            c.quadraticCurveTo(168, 275, 182, 285);
+            c.stroke();
+          },
+          ladybug(c) {
+            ell(c, 150, 178, 86, 76); // body dome
+            circ(c, 150, 96, 38); // head
+            c.beginPath();
+            c.moveTo(150, 112);
+            c.lineTo(150, 252);
+            c.stroke(); // wing split
+
+            // spots
+            circ(c, 113, 150, 12);
+            circ(c, 187, 150, 12);
+            circ(c, 108, 202, 12);
+            circ(c, 192, 202, 12);
+            circ(c, 150, 228, 12);
+
+            circ(c, 136, 90, 5);
+            circ(c, 164, 90, 5); // eyes
+
+            // antennae
+            c.beginPath();
+            c.moveTo(133, 66);
+            c.quadraticCurveTo(115, 42, 104, 36);
+            c.stroke();
+            circ(c, 104, 36, 4);
+            c.beginPath();
+            c.moveTo(167, 66);
+            c.quadraticCurveTo(185, 42, 196, 36);
+            c.stroke();
+            circ(c, 196, 36, 4);
+
+            // little legs
+            [-1, 1].forEach((sgn) => {
+              [150, 190, 225].forEach((y) => {
+                c.beginPath();
+                c.moveTo(150 + sgn * 82, y);
+                c.lineTo(150 + sgn * 105, y + 12);
+                c.stroke();
+              });
+            });
+          },
+          lion(c) {
+            for (let i = 0; i < 14; i++) {
+              const a = (i / 14) * Math.PI * 2;
+              const cx = 150 + Math.cos(a) * 82,
+                cy = 150 + Math.sin(a) * 82;
+              circ(c, cx, cy, 26);
+            }
+            circ(c, 150, 150, 58); // head
+            circ(c, 113, 105, 14);
+            circ(c, 187, 105, 14); // ears
+            circ(c, 128, 140, 6);
+            circ(c, 172, 140, 6); // eyes
+            tri(c, 140, 163, 160, 163, 150, 175); // nose
+            c.beginPath();
+            c.moveTo(150, 176);
+            c.quadraticCurveTo(150, 190, 130, 192);
+            c.stroke();
+            c.beginPath();
+            c.moveTo(150, 176);
+            c.quadraticCurveTo(150, 190, 170, 192);
+            c.stroke();
+            [-1, 1].forEach((sgn) => {
+              [-8, 0, 8].forEach((dy) => {
+                c.beginPath();
+                c.moveTo(150 + sgn * 20, 160 + dy * 0.5);
+                c.lineTo(150 + sgn * 60, 155 + dy);
+                c.stroke();
+              });
+            });
+          },
+          fish(c) {
+            ell(c, 135, 150, 80, 52); // body
+            tri(c, 210, 150, 268, 108, 268, 192); // tail
+            tri(c, 118, 100, 148, 58, 168, 102); // top fin
+            tri(c, 118, 200, 148, 232, 168, 198); // bottom fin
+            circ(c, 90, 140, 8); // eye
+            c.beginPath();
+            c.moveTo(105, 150);
+            c.quadraticCurveTo(115, 160, 105, 172);
+            c.stroke(); // gill
+            c.beginPath();
+            c.moveTo(56, 150);
+            c.quadraticCurveTo(66, 158, 58, 146);
+            c.stroke(); // mouth
+            circ(c, 150, 140, 10);
+            circ(c, 175, 155, 9); // scale dots
+          },
+          butterfly(c) {
+            ell(c, 150, 150, 10, 72); // body
+            ell(c, 102, 112, 52, 38, -0.35); // upper-left wing
+            ell(c, 198, 112, 52, 38, 0.35); // upper-right wing
+            ell(c, 110, 182, 38, 28, -0.25); // lower-left wing
+            ell(c, 190, 182, 38, 28, 0.25); // lower-right wing
+            circ(c, 120, 105, 10);
+            circ(c, 180, 105, 10); // wing pattern dots
+            circ(c, 118, 180, 7);
+            circ(c, 182, 180, 7);
+            c.beginPath();
+            c.moveTo(146, 88);
+            c.quadraticCurveTo(130, 60, 115, 55);
+            c.stroke();
+            c.beginPath();
+            c.moveTo(154, 88);
+            c.quadraticCurveTo(170, 60, 185, 55);
+            c.stroke();
+            circ(c, 115, 55, 4);
+            circ(c, 185, 55, 4);
+          },
+        };
+
+        function drawOutline(animal) {
+          const rect = wrap.getBoundingClientRect();
+          octx.save();
+          octx.setTransform(1, 0, 0, 1, 0, 0);
+          octx.clearRect(0, 0, outlineCanvas.width, outlineCanvas.height);
+          octx.restore();
+          octx.setTransform(
+            window.devicePixelRatio || 1,
+            0,
+            0,
+            window.devicePixelRatio || 1,
+            0,
+            0,
+          );
+          if (animal && animalArt[animal]) {
+            withOutlineTransform(animalArt[animal]);
+          }
+        }
+
+        resizeCanvases();
+
+        /* ================= DRAWING HELPERS ================= */
+        function getPos(e) {
+          const rect = paintCanvas.getBoundingClientRect();
+          const point = e.touches ? e.touches[0] : e;
+          return { x: point.clientX - rect.left, y: point.clientY - rect.top };
+        }
+        let rainbowHue = 0;
+        function currentColor() {
+          if (color === "rainbow") {
+            rainbowHue = (rainbowHue + 4) % 360;
+            return `hsl(${rainbowHue},85%,60%)`;
+          }
+          return color;
+        }
+        const stampEmoji = {
+          star: "⭐",
+          heart: "💗",
+          flower: "🌸",
+          sun: "☀️",
+          paw: "🐾",
+        };
+
+        function stampAt(x, y) {
+          const size = brushSize * 3.2;
+          pctx.save();
+          pctx.font = `${size}px serif`;
+          pctx.textAlign = "center";
+          pctx.textBaseline = "middle";
+          pctx.translate(x, y);
+          pctx.rotate(((Math.random() * 40 - 20) * Math.PI) / 180);
+          pctx.fillText(stampEmoji[tool], 0, 0);
+          pctx.restore();
+          spawnConfettiBurst(x, y, color);
+          playPop(500 + Math.random() * 300);
+        }
+        function drawDot(x, y) {
+          pctx.beginPath();
+          pctx.fillStyle = currentColor();
+          pctx.arc(x, y, brushSize / 2, 0, Math.PI * 2);
+          pctx.fill();
+        }
+        function drawLine(x0, y0, x1, y1) {
+          pctx.beginPath();
+          pctx.strokeStyle = currentColor();
+          pctx.lineWidth = brushSize;
+          pctx.moveTo(x0, y0);
+          pctx.lineTo(x1, y1);
+          pctx.stroke();
+        }
+
+        function updateCursor(x, y) {
+          cursorDot.style.left = x + "px";
+          cursorDot.style.top = y + "px";
+          if (tool === "brush") {
+            const d = brushSize + 6;
+            cursorDot.style.width = d + "px";
+            cursorDot.style.height = d + "px";
+            cursorDot.style.background =
+              color === "rainbow" ? "transparent" : color;
+            cursorDot.style.borderRadius = "50%";
+          } else if (tool === "fill") {
+            cursorDot.style.width = "30px";
+            cursorDot.style.height = "30px";
+            cursorDot.style.background = "transparent";
+          } else {
+            cursorDot.style.width = brushSize * 2 + "px";
+            cursorDot.style.height = brushSize * 2 + "px";
+            cursorDot.style.background = "transparent";
+          }
+        }
+
+        /* ================= FLOOD FILL ================= */
+        function hexToRgbArr(hex) {
+          const h = hex.replace("#", "");
+          return [
+            parseInt(h.substring(0, 2), 16),
+            parseInt(h.substring(2, 4), 16),
+            parseInt(h.substring(4, 6), 16),
+          ];
+        }
+        function hslToRgb(h, s, l) {
+          h /= 360;
+          function hue2rgb(p, q, t) {
+            if (t < 0) t += 1;
+            if (t > 1) t -= 1;
+            if (t < 1 / 6) return p + (q - p) * 6 * t;
+            if (t < 1 / 2) return q;
+            if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+            return p;
+          }
+          let r, g, b;
+          if (s === 0) {
+            r = g = b = l;
+          } else {
+            const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+            const p = 2 * l - q;
+            r = hue2rgb(p, q, h + 1 / 3);
+            g = hue2rgb(p, q, h);
+            b = hue2rgb(p, q, h - 1 / 3);
+          }
+          return [
+            Math.round(r * 255),
+            Math.round(g * 255),
+            Math.round(b * 255),
+          ];
+        }
+        function floodFill(cssX, cssY) {
+          const dpr = window.devicePixelRatio || 1;
+          const w = paintCanvas.width,
+            h = paintCanvas.height;
+          const px = Math.floor(cssX * dpr),
+            py = Math.floor(cssY * dpr);
+          if (px < 0 || py < 0 || px >= w || py >= h) return;
+
+          const paintData = pctx.getImageData(0, 0, w, h);
+          const outlineData = octx.getImageData(0, 0, w, h);
+          const pd = paintData.data,
+            od = outlineData.data;
+          const startIdx = (py * w + px) * 4;
+
+          if (od[startIdx + 3] > 120) {
+            playPop(280);
+            return;
+          } // clicked a line
+
+          let fr, fg, fb;
+          if (color === "rainbow") {
+            [fr, fg, fb] = hslToRgb(Math.random() * 360, 0.85, 0.6);
+          } else {
+            [fr, fg, fb] = hexToRgbArr(color);
+          }
+          const fa = 255;
+
+          const tR = pd[startIdx],
+            tG = pd[startIdx + 1],
+            tB = pd[startIdx + 2],
+            tA = pd[startIdx + 3];
+          if (
+            Math.abs(tR - fr) < 8 &&
+            Math.abs(tG - fg) < 8 &&
+            Math.abs(tB - fb) < 8 &&
+            Math.abs(tA - fa) < 8
+          )
+            return;
+
+          const tol = 40;
+          const stack = [startIdx];
+          const maxIter = w * h;
+          let iter = 0;
+          while (stack.length && iter < maxIter) {
+            iter++;
+            const i = stack.pop();
+            if (pd[i] === undefined) continue;
+            if (
+              !(
+                Math.abs(pd[i] - tR) <= tol &&
+                Math.abs(pd[i + 1] - tG) <= tol &&
+                Math.abs(pd[i + 2] - tB) <= tol &&
+                Math.abs(pd[i + 3] - tA) <= tol
+              )
+            )
+              continue;
+            if (od[i + 3] > 120) continue;
+            pd[i] = fr;
+            pd[i + 1] = fg;
+            pd[i + 2] = fb;
+            pd[i + 3] = fa;
+            const p = i / 4,
+              x = p % w,
+              y = (p - x) / w;
+            if (x > 0) stack.push(i - 4);
+            if (x < w - 1) stack.push(i + 4);
+            if (y > 0) stack.push(i - w * 4);
+            if (y < h - 1) stack.push(i + w * 4);
+          }
+          pctx.putImageData(paintData, 0, 0);
+          playSwish();
+          spawnConfettiBurst(cssX, cssY, color);
+        }
+
+        /* ================= INPUT ================= */
+        function start(e) {
+          e.preventDefault();
+          const { x, y } = getPos(e);
+          lastX = x;
+          lastY = y;
+          updateCursor(x, y);
+          if (tool === "brush") {
+            drawing = true;
+            drawDot(x, y);
+            playSwish();
+          } else if (tool === "fill") {
+            floodFill(x, y);
+            saveSnapshot();
+          } else {
+            stampAt(x, y);
+            saveSnapshot();
+          }
+        }
+        function move(e) {
+          const { x, y } = getPos(e);
+          updateCursor(x, y);
+          if (!drawing) return;
+          e.preventDefault();
+          if (tool === "brush") {
+            drawLine(lastX, lastY, x, y);
+            lastX = x;
+            lastY = y;
+          }
+        }
+        function end() {
+          if (drawing) {
+            drawing = false;
+            saveSnapshot();
+          }
+        }
+
+        paintCanvas.addEventListener("mousedown", start);
+        paintCanvas.addEventListener("mousemove", move);
+        window.addEventListener("mouseup", end);
+        paintCanvas.addEventListener("touchstart", start, { passive: false });
+        paintCanvas.addEventListener("touchmove", move, { passive: false });
+        window.addEventListener("touchend", end);
+        paintCanvas.addEventListener("mouseleave", () => {
+          cursorDot.style.width = "0";
+          cursorDot.style.height = "0";
         });
-      });
-    },
-    lion(c){
-      for(let i=0;i<14;i++){
-        const a = (i/14)*Math.PI*2;
-        const cx = 150+Math.cos(a)*82, cy = 150+Math.sin(a)*82;
-        circ(c,cx,cy,26);
-      }
-      circ(c,150,150,58);                // head
-      circ(c,113,105,14); circ(c,187,105,14); // ears
-      circ(c,128,140,6); circ(c,172,140,6);   // eyes
-      tri(c,140,163,160,163,150,175);         // nose
-      c.beginPath(); c.moveTo(150,176); c.quadraticCurveTo(150,190,130,192); c.stroke();
-      c.beginPath(); c.moveTo(150,176); c.quadraticCurveTo(150,190,170,192); c.stroke();
-      [-1,1].forEach(sgn=>{
-        [-8,0,8].forEach(dy=>{
-          c.beginPath(); c.moveTo(150+sgn*20,160+dy*0.5); c.lineTo(150+sgn*60,155+dy); c.stroke();
+        paintCanvas.addEventListener("mouseenter", (e) => {
+          const { x, y } = getPos(e);
+          updateCursor(x, y);
         });
-      });
-    },
-    fish(c){
-      ell(c,135,150,80,52);              // body
-      tri(c,210,150,268,108,268,192);    // tail
-      tri(c,118,100,148,58,168,102);     // top fin
-      tri(c,118,200,148,232,168,198);    // bottom fin
-      circ(c,90,140,8);                  // eye
-      c.beginPath(); c.moveTo(105,150); c.quadraticCurveTo(115,160,105,172); c.stroke(); // gill
-      c.beginPath(); c.moveTo(56,150); c.quadraticCurveTo(66,158,58,146); c.stroke();    // mouth
-      circ(c,150,140,10); circ(c,175,155,9); // scale dots
-    },
-    butterfly(c){
-      ell(c,150,150,10,72);              // body
-      ell(c,102,112,52,38,-0.35);        // upper-left wing
-      ell(c,198,112,52,38,0.35);         // upper-right wing
-      ell(c,110,182,38,28,-0.25);        // lower-left wing
-      ell(c,190,182,38,28,0.25);         // lower-right wing
-      circ(c,120,105,10); circ(c,180,105,10);   // wing pattern dots
-      circ(c,118,180,7); circ(c,182,180,7);
-      c.beginPath(); c.moveTo(146,88); c.quadraticCurveTo(130,60,115,55); c.stroke();
-      c.beginPath(); c.moveTo(154,88); c.quadraticCurveTo(170,60,185,55); c.stroke();
-      circ(c,115,55,4); circ(c,185,55,4);
-    }
-  };
 
-  function drawOutline(animal){
-    const rect = wrap.getBoundingClientRect();
-    octx.save();
-    octx.setTransform(1,0,0,1,0,0);
-    octx.clearRect(0,0,outlineCanvas.width,outlineCanvas.height);
-    octx.restore();
-    octx.setTransform(window.devicePixelRatio||1,0,0,window.devicePixelRatio||1,0,0);
-    if(animal && animalArt[animal]){
-      withOutlineTransform(animalArt[animal]);
-    }
-  }
+        /* ================= UI: swatches / sizes / tools ================= */
+        document.querySelectorAll(".swatch").forEach((sw) => {
+          sw.addEventListener("click", () => {
+            document
+              .querySelectorAll(".swatch")
+              .forEach((s) => s.classList.remove("selected"));
+            sw.classList.add("selected");
+            color = sw.dataset.color;
+            playPop(700);
+          });
+        });
+        document.querySelectorAll(".sizeDot").forEach((dot) => {
+          dot.addEventListener("click", () => {
+            document
+              .querySelectorAll(".sizeDot")
+              .forEach((d) => d.classList.remove("selected"));
+            dot.classList.add("selected");
+            brushSize = parseInt(dot.dataset.size, 10);
+          });
+        });
+        document.querySelectorAll(".toolbtn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            document
+              .querySelectorAll(".toolbtn")
+              .forEach((b) => b.classList.remove("selected"));
+            btn.classList.add("selected");
+            tool = btn.dataset.tool;
+          });
+        });
 
-  resizeCanvases();
+        /* ================= CONFETTI / TOAST ================= */
+        function spawnConfettiBurst(x, y, col) {
+          for (let i = 0; i < 10; i++) {
+            const c = document.createElement("div");
+            c.className = "confetti";
+            const size = 6 + Math.random() * 6;
+            c.style.width = size + "px";
+            c.style.height = size + "px";
+            c.style.background =
+              col === "rainbow" ? `hsl(${Math.random() * 360},85%,60%)` : col;
+            const rect = wrap.getBoundingClientRect();
+            c.style.left = rect.left + x + "px";
+            c.style.top = rect.top + y + "px";
+            c.style.animationDuration = 0.8 + Math.random() * 0.6 + "s";
+            document.body.appendChild(c);
+            setTimeout(() => c.remove(), 1500);
+          }
+        }
+        function spawnConfettiFull() {
+          const colors = [
+            "#FF5C7A",
+            "#FFD84D",
+            "#7ED957",
+            "#4DB6FF",
+            "#6C4AB6",
+            "#FF914D",
+            "#FF7EDB",
+          ];
+          for (let i = 0; i < 40; i++) {
+            const c = document.createElement("div");
+            c.className = "confetti";
+            const size = 6 + Math.random() * 8;
+            c.style.width = size + "px";
+            c.style.height = size + "px";
+            c.style.background =
+              colors[Math.floor(Math.random() * colors.length)];
+            c.style.left = Math.random() * window.innerWidth + "px";
+            c.style.top = "-20px";
+            c.style.animationDuration = 1.4 + Math.random() * 1.2 + "s";
+            document.body.appendChild(c);
+            setTimeout(() => c.remove(), 3000);
+          }
+        }
+        function showToast(msg) {
+          toast.textContent = msg;
+          toast.classList.add("show");
+          setTimeout(() => toast.classList.remove("show"), 1400);
+        }
 
-  /* ================= DRAWING HELPERS ================= */
-  function getPos(e){
-    const rect = paintCanvas.getBoundingClientRect();
-    const point = e.touches ? e.touches[0] : e;
-    return { x: point.clientX - rect.left, y: point.clientY - rect.top };
-  }
-  let rainbowHue = 0;
-  function currentColor(){
-    if(color==='rainbow'){ rainbowHue=(rainbowHue+4)%360; return `hsl(${rainbowHue},85%,60%)`; }
-    return color;
-  }
-  const stampEmoji = { star:'⭐', heart:'💗', flower:'🌸', sun:'☀️', paw:'🐾' };
+        /* ================= TOPBAR ACTIONS ================= */
+        document.getElementById("newBtn").addEventListener("click", () => {
+          saveSnapshot();
+          pctx.clearRect(0, 0, paintCanvas.width, paintCanvas.height);
+          showToast("Clean slate! ✨");
+          playPop(400);
+        });
+        document.getElementById("saveBtn").addEventListener("click", () => {
+          const out = document.createElement("canvas");
+          out.width = paintCanvas.width;
+          out.height = paintCanvas.height;
+          const octx2 = out.getContext("2d");
+          octx2.fillStyle = "#FFF8EC";
+          octx2.fillRect(0, 0, out.width, out.height);
+          octx2.drawImage(paintCanvas, 0, 0);
+          octx2.drawImage(outlineCanvas, 0, 0);
+          const link = document.createElement("a");
+          const playerName = (
+            localStorage.getItem("kanvasAmmaPlayerName") || ""
+          ).trim();
+          link.download =
+            (playerName ? playerName.replace(/\s+/g, "-") + "-" : "") +
+            (currentAnimal ? currentAnimal + "-" : "") +
+            "painting.png";
+          link.href = out.toDataURL("image/png");
+          link.click();
+          spawnConfettiFull();
+          showToast("Picture saved! 🎉");
+          playPop(900);
+        });
+        document
+          .getElementById("galleryBtn")
+          .addEventListener("click", () => openGallery());
+        document.getElementById("undoBtn").addEventListener("click", undo);
 
-  function stampAt(x,y){
-    const size = brushSize*3.2;
-    pctx.save();
-    pctx.font = `${size}px serif`;
-    pctx.textAlign='center'; pctx.textBaseline='middle';
-    pctx.translate(x,y); pctx.rotate((Math.random()*40-20)*Math.PI/180);
-    pctx.fillText(stampEmoji[tool],0,0);
-    pctx.restore();
-    spawnConfettiBurst(x,y,color);
-    playPop(500+Math.random()*300);
-  }
-  function drawDot(x,y){ pctx.beginPath(); pctx.fillStyle=currentColor(); pctx.arc(x,y,brushSize/2,0,Math.PI*2); pctx.fill(); }
-  function drawLine(x0,y0,x1,y1){ pctx.beginPath(); pctx.strokeStyle=currentColor(); pctx.lineWidth=brushSize; pctx.moveTo(x0,y0); pctx.lineTo(x1,y1); pctx.stroke(); }
+        /* ================= GALLERY ================= */
+        function openGallery() {
+          galleryOverlay.hidden = false;
+        }
+        function closeGallery() {
+          galleryOverlay.hidden = true;
+        }
+        document.querySelectorAll(".galleryItem").forEach((item) => {
+          item.addEventListener("click", () => {
+            saveSnapshot();
+            const animal = item.dataset.animal;
+            pctx.clearRect(0, 0, paintCanvas.width, paintCanvas.height);
+            currentAnimal = animal === "blank" ? null : animal;
+            drawOutline(currentAnimal);
+            closeGallery();
+            playPop(650);
+            spawnConfettiFull();
+            if (currentAnimal) {
+              showToast(
+                "Let's paint the " + animalNames[currentAnimal] + "! 🎨",
+              );
+              speak(animalNames[currentAnimal]);
+            } else {
+              showToast("Blank page ready! ✨");
+            }
+          });
+        });
 
-  function updateCursor(x,y){
-    cursorDot.style.left=x+'px'; cursorDot.style.top=y+'px';
-    if(tool==='brush'){
-      const d=brushSize+6;
-      cursorDot.style.width=d+'px'; cursorDot.style.height=d+'px';
-      cursorDot.style.background= color==='rainbow' ? 'transparent' : color;
-      cursorDot.style.borderRadius='50%';
-    } else if(tool==='fill'){
-      cursorDot.style.width='30px'; cursorDot.style.height='30px';
-      cursorDot.style.background='transparent';
-    } else {
-      cursorDot.style.width=(brushSize*2)+'px'; cursorDot.style.height=(brushSize*2)+'px';
-      cursorDot.style.background='transparent';
-    }
-  }
+        const coverScreen = document.getElementById("coverScreen");
+        const playerNameInput = document.getElementById("playerName");
+        const startBtn = document.getElementById("startBtn");
 
-  /* ================= FLOOD FILL ================= */
-  function hexToRgbArr(hex){
-    const h = hex.replace('#','');
-    return [parseInt(h.substring(0,2),16), parseInt(h.substring(2,4),16), parseInt(h.substring(4,6),16)];
-  }
-  function hslToRgb(h,s,l){
-    h/=360;
-    function hue2rgb(p,q,t){ if(t<0)t+=1; if(t>1)t-=1; if(t<1/6)return p+(q-p)*6*t; if(t<1/2)return q; if(t<2/3)return p+(q-p)*(2/3-t)*6; return p; }
-    let r,g,b;
-    if(s===0){ r=g=b=l; } else {
-      const q = l<0.5 ? l*(1+s) : l+s-l*s;
-      const p = 2*l-q;
-      r=hue2rgb(p,q,h+1/3); g=hue2rgb(p,q,h); b=hue2rgb(p,q,h-1/3);
-    }
-    return [Math.round(r*255),Math.round(g*255),Math.round(b*255)];
-  }
-  function floodFill(cssX, cssY){
-    const dpr = window.devicePixelRatio||1;
-    const w = paintCanvas.width, h = paintCanvas.height;
-    const px = Math.floor(cssX*dpr), py = Math.floor(cssY*dpr);
-    if(px<0||py<0||px>=w||py>=h) return;
+        const savedName = localStorage.getItem("kanvasAmmaPlayerName");
+        if (savedName) playerNameInput.value = savedName;
 
-    const paintData = pctx.getImageData(0,0,w,h);
-    const outlineData = octx.getImageData(0,0,w,h);
-    const pd = paintData.data, od = outlineData.data;
-    const startIdx = (py*w+px)*4;
+        function startGame() {
+          const name = playerNameInput.value.trim();
+          if (name) localStorage.setItem("kanvasAmmaPlayerName", name);
+          coverScreen.hidden = true;
+          openGallery();
+          if (name) speak("Hai " + name + "! Ayo lukis!");
+        }
+        startBtn.addEventListener("click", startGame);
+        playerNameInput.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") startGame();
+        });
 
-    if(od[startIdx+3] > 120){ playPop(280); return; } // clicked a line
-
-    let fr,fg,fb;
-    if(color==='rainbow'){ [fr,fg,fb] = hslToRgb(Math.random()*360,0.85,0.6); }
-    else { [fr,fg,fb] = hexToRgbArr(color); }
-    const fa = 255;
-
-    const tR=pd[startIdx],tG=pd[startIdx+1],tB=pd[startIdx+2],tA=pd[startIdx+3];
-    if(Math.abs(tR-fr)<8 && Math.abs(tG-fg)<8 && Math.abs(tB-fb)<8 && Math.abs(tA-fa)<8) return;
-
-    const tol = 40;
-    const stack = [startIdx];
-    const maxIter = w*h;
-    let iter=0;
-    while(stack.length && iter<maxIter){
-      iter++;
-      const i = stack.pop();
-      if(pd[i]===undefined) continue;
-      if(!(Math.abs(pd[i]-tR)<=tol && Math.abs(pd[i+1]-tG)<=tol && Math.abs(pd[i+2]-tB)<=tol && Math.abs(pd[i+3]-tA)<=tol)) continue;
-      if(od[i+3] > 120) continue;
-      pd[i]=fr; pd[i+1]=fg; pd[i+2]=fb; pd[i+3]=fa;
-      const p = i/4, x = p%w, y = (p - x)/w;
-      if(x>0) stack.push(i-4);
-      if(x<w-1) stack.push(i+4);
-      if(y>0) stack.push(i-w*4);
-      if(y<h-1) stack.push(i+w*4);
-    }
-    pctx.putImageData(paintData,0,0);
-    playSwish();
-    spawnConfettiBurst(cssX,cssY,color);
-  }
-
-  /* ================= INPUT ================= */
-  function start(e){
-    e.preventDefault();
-    const {x,y} = getPos(e);
-    lastX=x; lastY=y;
-    updateCursor(x,y);
-    if(tool==='brush'){ drawing=true; drawDot(x,y); playSwish(); }
-    else if(tool==='fill'){ floodFill(x,y); saveSnapshot(); }
-    else { stampAt(x,y); saveSnapshot(); }
-  }
-  function move(e){
-    const {x,y} = getPos(e);
-    updateCursor(x,y);
-    if(!drawing) return;
-    e.preventDefault();
-    if(tool==='brush'){ drawLine(lastX,lastY,x,y); lastX=x; lastY=y; }
-  }
-  function end(){ if(drawing){ drawing=false; saveSnapshot(); } }
-
-  paintCanvas.addEventListener('mousedown', start);
-  paintCanvas.addEventListener('mousemove', move);
-  window.addEventListener('mouseup', end);
-  paintCanvas.addEventListener('touchstart', start, {passive:false});
-  paintCanvas.addEventListener('touchmove', move, {passive:false});
-  window.addEventListener('touchend', end);
-  paintCanvas.addEventListener('mouseleave', ()=>{ cursorDot.style.width='0'; cursorDot.style.height='0'; });
-  paintCanvas.addEventListener('mouseenter', (e)=>{ const {x,y}=getPos(e); updateCursor(x,y); });
-
-  /* ================= UI: swatches / sizes / tools ================= */
-  document.querySelectorAll('.swatch').forEach(sw=>{
-    sw.addEventListener('click', ()=>{
-      document.querySelectorAll('.swatch').forEach(s=>s.classList.remove('selected'));
-      sw.classList.add('selected');
-      color = sw.dataset.color;
-      playPop(700);
-    });
-  });
-  document.querySelectorAll('.sizeDot').forEach(dot=>{
-    dot.addEventListener('click', ()=>{
-      document.querySelectorAll('.sizeDot').forEach(d=>d.classList.remove('selected'));
-      dot.classList.add('selected');
-      brushSize = parseInt(dot.dataset.size,10);
-    });
-  });
-  document.querySelectorAll('.toolbtn').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      document.querySelectorAll('.toolbtn').forEach(b=>b.classList.remove('selected'));
-      btn.classList.add('selected');
-      tool = btn.dataset.tool;
-    });
-  });
-
-  /* ================= CONFETTI / TOAST ================= */
-  function spawnConfettiBurst(x,y,col){
-    for(let i=0;i<10;i++){
-      const c = document.createElement('div');
-      c.className='confetti';
-      const size = 6+Math.random()*6;
-      c.style.width=size+'px'; c.style.height=size+'px';
-      c.style.background = col==='rainbow' ? `hsl(${Math.random()*360},85%,60%)` : col;
-      const rect = wrap.getBoundingClientRect();
-      c.style.left=(rect.left+x)+'px'; c.style.top=(rect.top+y)+'px';
-      c.style.animationDuration=(0.8+Math.random()*0.6)+'s';
-      document.body.appendChild(c);
-      setTimeout(()=>c.remove(),1500);
-    }
-  }
-  function spawnConfettiFull(){
-    const colors=['#FF5C7A','#FFD84D','#7ED957','#4DB6FF','#6C4AB6','#FF914D','#FF7EDB'];
-    for(let i=0;i<40;i++){
-      const c = document.createElement('div');
-      c.className='confetti';
-      const size=6+Math.random()*8;
-      c.style.width=size+'px'; c.style.height=size+'px';
-      c.style.background=colors[Math.floor(Math.random()*colors.length)];
-      c.style.left=(Math.random()*window.innerWidth)+'px'; c.style.top='-20px';
-      c.style.animationDuration=(1.4+Math.random()*1.2)+'s';
-      document.body.appendChild(c);
-      setTimeout(()=>c.remove(),3000);
-    }
-  }
-  function showToast(msg){
-    toast.textContent = msg;
-    toast.classList.add('show');
-    setTimeout(()=>toast.classList.remove('show'),1400);
-  }
-
-  /* ================= TOPBAR ACTIONS ================= */
-  document.getElementById('newBtn').addEventListener('click', ()=>{
-    saveSnapshot();
-    pctx.clearRect(0,0,paintCanvas.width,paintCanvas.height);
-    showToast('Clean slate! ✨');
-    playPop(400);
-  });
-  document.getElementById('saveBtn').addEventListener('click', ()=>{
-    const out = document.createElement('canvas');
-    out.width = paintCanvas.width; out.height = paintCanvas.height;
-    const octx2 = out.getContext('2d');
-    octx2.fillStyle = '#FFF8EC';
-    octx2.fillRect(0,0,out.width,out.height);
-    octx2.drawImage(paintCanvas,0,0);
-    octx2.drawImage(outlineCanvas,0,0);
-    const link = document.createElement('a');
-    const playerName = (localStorage.getItem('kanvasAmmaPlayerName')||'').trim();
-    link.download = (playerName ? playerName.replace(/\s+/g,'-')+'-' : '') + (currentAnimal ? currentAnimal+'-' : '') + 'painting.png';
-    link.href = out.toDataURL('image/png');
-    link.click();
-    spawnConfettiFull();
-    showToast('Picture saved! 🎉');
-    playPop(900);
-  });
-  document.getElementById('galleryBtn').addEventListener('click', ()=> openGallery());
-  document.getElementById('undoBtn').addEventListener('click', undo);
-
-  /* ================= GALLERY ================= */
-  function openGallery(){ galleryOverlay.hidden = false; }
-  function closeGallery(){ galleryOverlay.hidden = true; }
-  document.querySelectorAll('.galleryItem').forEach(item=>{
-    item.addEventListener('click', ()=>{
-      saveSnapshot();
-      const animal = item.dataset.animal;
-      pctx.clearRect(0,0,paintCanvas.width,paintCanvas.height);
-      currentAnimal = animal==='blank' ? null : animal;
-      drawOutline(currentAnimal);
-      closeGallery();
-      playPop(650);
-      spawnConfettiFull();
-      if(currentAnimal){
-        showToast('Let\'s paint the ' + animalNames[currentAnimal] + '! 🎨');
-        speak(animalNames[currentAnimal]);
-      } else {
-        showToast('Blank page ready! ✨');
-      }
-    });
-  });
-
-  const coverScreen = document.getElementById('coverScreen');
-  const playerNameInput = document.getElementById('playerName');
-  const startBtn = document.getElementById('startBtn');
-
-  const savedName = localStorage.getItem('kanvasAmmaPlayerName');
-  if(savedName) playerNameInput.value = savedName;
-
-  function startGame(){
-    const name = playerNameInput.value.trim();
-    if(name) localStorage.setItem('kanvasAmmaPlayerName', name);
-    coverScreen.hidden = true;
-    openGallery();
-    if(name) speak('Hai ' + name + '! Ayo lukis!');
-  }
-  startBtn.addEventListener('click', startGame);
-  playerNameInput.addEventListener('keydown', (e)=>{ if(e.key==='Enter') startGame(); });
-
-  // Show cover screen on first load
-  coverScreen.hidden = false;
-  updateCursor(-100,-100);
-})();
-</script>
-</body>
+        // Show cover screen on first load
+        coverScreen.hidden = false;
+        updateCursor(-100, -100);
+      })();
+    </script>
+  </body>
 </html>
